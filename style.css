@@ -118,7 +118,7 @@ margin-bottom: 0;
     color:#fff;
     font-size: 0.9rem;
     text-align: center;
-    background:rgba(0,0,0,0,6)url(images/top-02.jpg) center center/cover no-repeat;
+    background:rgba(0,0,0,0.6) url(images/top-image_02.jpg) center center/cover no-repeat;
     background-blend-mode: darken;
 }
 .footer-logo{
@@ -145,25 +145,27 @@ i::before{
     font-size: 0.8rem;
 }
 
+
 /*ファーストビュー大きな画像*/
 .fview img {
     width:100%;
     height: 560px;
     object-fit: cover;
 }
+/*ハンバーガー用チェックボックス、完成後noneにする*/
 .ck-burger{
     display:block;
 }
+/*ハンバーガーのボタン*/
 .btn-burger{
-    background: #ffff00;
+    position:absolute;
+    top: 25px;
+    right:15px;
+    z-index: 2;/*解説：重なり順。数値が大きいほど上に配置、初期値は０*/
     display:block;
     width:44px;
     height:44px;
     cursor:pointer;
-    position:absolute;
-    top: 25px;
-    right:15px;
-    z-index: 2;
 }
 .btn-burger::before{
     font-family: "Font Awesome 5 Free";
@@ -178,7 +180,7 @@ i::before{
     font-size: 2.8em;
     line-height: 2rem;
 }
-.ck-burger:checked~.menu.menulist{
+.ck-burger:checked~.menu.menu-list{
     display:block
 }
 .menu{
@@ -193,20 +195,10 @@ i::before{
     text-align: center;
     padding:20px 10px;
 }
-
 /*PC対応(幅768px以上にしてる)*/
-@media (min-width:768px){
-.btn-burger{
-    display:none;
-    
-}
-
-
-
-/*3ページ目*/
-.header {
-    padding: 40px 00;
-}
+@media (min-width:768px) {
+.header{
+    padding: 40px 0;
 }
 .logo{
     width: 360px;
@@ -234,4 +226,5 @@ i::before{
 }
 .table_betail{
     width: 70%;
+}
 }
